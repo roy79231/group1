@@ -21,4 +21,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-roy79231
+Route::get('/try',[App\Http\Controllers\TryController::class, 'index'])->name('r_index')->middleware('auth');
+Route::post('/try/create',[App\Http\Controllers\TryController::class, 'create'])->name('rcreate')->middleware('auth');
