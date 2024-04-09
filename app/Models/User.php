@@ -43,6 +43,3 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 }
-
-
-建築師巴布到此一遊
