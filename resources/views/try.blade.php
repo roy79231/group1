@@ -18,7 +18,6 @@
                     123
                     @endif
                     
-                    
                 </div>
             </div>
         </div>
