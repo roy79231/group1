@@ -58,12 +58,13 @@
                 <div class='right-align'>
                     <a href="{{route('n_edit',$post)}}">編輯</a> 
                 </div>
-                <a href="{{route('n_create')}}">新增文章</a>
             @endif
 
         </div>
     @endforeach
-    
+
+        <a href="{{route('n_create')}}">新增文章</a>
+
 @endsection
     
 </body>
