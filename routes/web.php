@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\n_PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +23,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/try',[App\Http\Controllers\TryController::class, 'index'])->name('r_index')->middleware('auth');
-Route::post('/try/create',[App\Http\Controllers\TryController::class, 'create'])->name('rcreate')->middleware('auth');
+Route::get('/n_post',[App\Http\Controllers\n_PostController::class, 'n_index'])->name('n_index')->middleware('auth');
+Route::match(['post','get'],'/n_post/create',[App\Http\Controllers\n_PostController::class, 'n_create'])->name('n_create')->middleware('auth');
+
+Route::match(['patch','put'],'/n_post/{post}',[n_PostController::class,'n_update'])->name('n_update');
+
+Route::get('/n_post/{post}/edit',[n_PostController::class,'n_edit'])->name('n_edit');
+
+Route::post('/n_post/store',[n_PostController::class,'n_store'])->name('n_store');
+
+Route::delete('/n_post/{post}',[n_PostController::class,'n_delete'])->name('n_delete');
