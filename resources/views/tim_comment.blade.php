@@ -20,13 +20,22 @@
                             <textarea name='content'> {{$post->content}}</textarea>
                         </td>
                         <td>
-                            <input type="submit" name='change' value="修改">
+                            @if(Auth::user()->name == $post->inputer)
+                                <input type="submit" name='change' value="修改">
+                            @else
+                                不可修改
+                            @endif
+
                         </td>
                     </form>
                         <td>
-                            <form action="{{route('timdelete',$post->id)}}" method="POST">
-                                @csrf
-                                <input type="submit" name="刪除" value="刪除">
+                                @if(Auth::user()->name == $post->inputer)
+                                    <form action="{{route('timdelete',$post->id)}}" method="POST">
+                                        @csrf
+                                        <input type="submit" name="刪除" value="刪除">
+                                @else  
+                                    不可刪除
+                                @endif
                             </form>
                         </td>
                         </tr>
