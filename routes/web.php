@@ -69,3 +69,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('timindex/timlastpage',[TimLinController::class,"timlastpage"])->name('timlastpage');// get取得資源 post修改資源 put/patch用來修改資料 delete用來刪除資料 any都處理 match只處理部分的route(array)

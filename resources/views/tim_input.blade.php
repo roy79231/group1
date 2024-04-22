@@ -20,7 +20,6 @@
                         @endif
                     </div>
 
-                    @if(Auth::user()->name == 'TimLin')
                     <div>
                         <form action="{{route('timcreate')}}" method='POST'><!--上傳資料 其他有 Delete update-->
                                 @csrf
@@ -40,8 +39,7 @@
                                     <br/>
                                 </div>
                         </form>
-                    </div>
-                    @endif     
+                    </div>   
 
                 </div>
             </div>
