@@ -66,3 +66,6 @@ Route::post('liangIndex/update/{id}',[LiangController::class,'liangUpdate'])->na
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
