@@ -23,6 +23,19 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+                <a class="navbar-brand" href="{{ url('/try') }}">
+                    try
+                </a>
+                <a class='navbar-brand' href="{{url('/n_post')}}">
+                    nmsl
+                </a>
+                <a class="navbar-brand" href="{{ url('/timindex') }}">
+                    TimLin
+                </a>
+                <a class="navbar-brand" href="{{ url('/liangIndex') }}">
+                    Liang
+                </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
