@@ -36,6 +36,9 @@
                 <a class="navbar-brand" href="{{ url('/liangIndex') }}">
                     Liang
                 </a>
+                <a class="navbar-brand" href="{{ url('/postindex') }}">
+                    james
+                </a>                
 
 =======
                 <a class="navbar-brand" href="{{ url('/postindex') }}">
